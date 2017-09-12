@@ -1,3 +1,22 @@
+/*-
+ * #%L
+ * id
+ * %%
+ * Copyright (C) 2017 Kiril Arabadzhiyski
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
 package com.a9ski.utils;
 
 import java.util.ArrayList;
@@ -139,6 +158,8 @@ public class IdentifiableUtils {
 	 *            the collection of identifiable objects. Can be null
 	 * @param id
 	 *            the id to search for. Can be null
+	 * @param <O>
+	 *            the Identifiable type
 	 * @return the first object from the collection with given id, or null if no such object exits
 	 */
 	public static <O extends Identifiable> O getById(final Collection<O> collection, final Long id) {
@@ -152,6 +173,8 @@ public class IdentifiableUtils {
 	 *            the collection of identifiable objects. Can be null
 	 * @param obj
 	 *            the object whose id will be search for. Can be null
+	 * @param <O>
+	 *            Identifiable type
 	 * @return the first object from the collection with the same id as <tt>obj</tt> or returns null if no such object exits
 	 */
 	public static <O extends Identifiable> O getById(final Collection<O> collection, final Identifiable obj) {
@@ -168,6 +191,8 @@ public class IdentifiableUtils {
 	 *            collection of identifiable objects. Can be null
 	 * @param id
 	 *            id to search for. Can be null
+	 * @param <O>
+	 *            Identifiable type
 	 * @return true if collection of identifiable objects contains at least one object with given id
 	 */
 	public static <O extends Identifiable> boolean containsId(final Collection<O> collection, final Long id) {
@@ -179,8 +204,10 @@ public class IdentifiableUtils {
 	 *
 	 * @param collection
 	 *            collection of identifiable objects. Can be null
-	 * @param id
+	 * @param obj
 	 *            id to search for. Can be null
+	 * @param <O>
+	 *            Identifiable type
 	 * @return true if collection of identifiable objects contains at least one object with given id
 	 */
 	public static <O extends Identifiable> boolean contains(final Collection<O> collection, final Identifiable obj) {
@@ -194,6 +221,8 @@ public class IdentifiableUtils {
 	 *            collection of identifiable objects. Can be null.
 	 * @param ids
 	 *            IDs to search for. Can be null
+	 * @param <O>
+	 *            Identifiable type
 	 * @return all objects from the collection that have id equals to any of the provided IDs
 	 */
 	public static <O extends Identifiable> List<O> getByIds(final Collection<O> collection, final Long... ids) {
@@ -207,6 +236,8 @@ public class IdentifiableUtils {
 	 *            collection of identifiable objects. Can be null.
 	 * @param ids
 	 *            IDs to search for. Can be null
+	 * @param <O>
+	 *            Identifiable type
 	 * @return all objects from the collection that have id equals to any of the provided IDs
 	 */
 	public static <O extends Identifiable> List<O> getByIds(final Collection<O> collection, final Collection<Long> ids) {
@@ -226,6 +257,9 @@ public class IdentifiableUtils {
 	 *            collection of identifiable objects. Can be null.
 	 * @param ids
 	 *            IDs to be removed
+	 * @param <C>
+	 *            collection type
+	 * @return the original collection, which has been altered
 	 */
 	public static <C extends Collection<? extends Identifiable>> C removeByIds(final C collection, final long... ids) {
 		final List<Long> idsList = ExtCollectionUtils.toList(ArrayUtils.toObject(ids));
@@ -239,6 +273,9 @@ public class IdentifiableUtils {
 	 *            collection of identifiable objects. Can be null.
 	 * @param ids
 	 *            IDs to be removed
+	 * @param <C>
+	 *            collection type
+	 * @return the original collection, which has been altered
 	 */
 	public static <C extends Collection<? extends Identifiable>> C removeByIds(final C collection, final Collection<Long> ids) {
 		if (CollectionUtils.isNotEmpty(collection)) {
@@ -287,6 +324,8 @@ public class IdentifiableUtils {
 	 *
 	 * @param collection
 	 *            collection of identifiable objects
+	 * @param <O>
+	 *            the Identifiable type
 	 * @return A map. The map key is the object id, the value is a list of objects having that id.
 	 */
 	public static <O extends Identifiable> SortedMap<Long, List<O>> mapByIds(final Collection<O> collection) {

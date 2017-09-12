@@ -52,6 +52,9 @@
 		</repository>
 	</distributionManagement>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
 	<dependencies>
 		<!-- slf4j used by other dependencies -->
