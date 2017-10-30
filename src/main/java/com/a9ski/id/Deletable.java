@@ -39,7 +39,9 @@ public interface Deletable {
 	 *
 	 * @return true if the object is not soft deleted
 	 */
-	public boolean isNotDeleted();
+	public default boolean isNotDeleted() {
+		return !isDeleted();
+	}
 
 	/**
 	 * Sets soft deleted flag
