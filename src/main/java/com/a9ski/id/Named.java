@@ -32,12 +32,4 @@ public interface Named {
 	 * @return the object name
 	 */
 	public String getName();
-
-	/**
-	 * Sets the object name
-	 *
-	 * @param name
-	 *            the object name
-	 */
-	public void setName(String name);
 }

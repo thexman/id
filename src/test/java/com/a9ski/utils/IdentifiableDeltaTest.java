@@ -28,11 +28,11 @@ import java.util.Arrays;
 import org.apache.commons.lang3.tuple.Pair;
 import org.junit.Test;
 
-import com.a9ski.id.Identifiable;
+import com.a9ski.id.MutableIdentifiable;
 
 public class IdentifiableDeltaTest {
 
-	private static class Entity implements Identifiable {
+	private static class Entity implements MutableIdentifiable {
 
 		/**
 		 *

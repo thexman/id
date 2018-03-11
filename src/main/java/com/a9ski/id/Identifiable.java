@@ -36,14 +36,6 @@ public interface Identifiable extends Serializable {
 	public long getId();
 
 	/**
-	 * Sets the id of the object
-	 * 
-	 * @param id
-	 *            the id of the object
-	 */
-	public void setId(long id);
-
-	/**
 	 * Checks if the object is new
 	 * 
 	 * @return true if the object is new

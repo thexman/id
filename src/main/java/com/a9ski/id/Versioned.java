@@ -33,11 +33,4 @@ public interface Versioned {
 	 */
 	public long getVersion();
 
-	/**
-	 * Sets object version
-	 * 
-	 * @param version
-	 *            object new version
-	 */
-	public void setVersion(final long version);
 }

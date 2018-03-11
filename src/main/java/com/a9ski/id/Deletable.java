@@ -42,9 +42,4 @@ public interface Deletable {
 	public default boolean isNotDeleted() {
 		return !isDeleted();
 	}
-
-	/**
-	 * Sets soft deleted flag
-	 */
-	public void setDeleted(boolean deleted);
 }

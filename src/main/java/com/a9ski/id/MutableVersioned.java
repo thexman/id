@@ -20,17 +20,18 @@
 package com.a9ski.id;
 
 /**
- * Interface for objects that have title
- *
+ * Interface for object that have verions. Usually version is used in optimistic locking. Mutable version.
+ * 
  * @author Kiril Arabadzhiyski
  *
  */
-public interface Titled {
-	/**
-	 * Gets the object title
-	 *
-	 * @return the object title
-	 */
-	public String getTitle();
+public interface MutableVersioned extends Versioned {
 
+	/**
+	 * Sets object version
+	 * 
+	 * @param version
+	 *            object new version
+	 */
+	public void setVersion(final long version);
 }

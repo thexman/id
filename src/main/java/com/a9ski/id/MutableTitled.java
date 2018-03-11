@@ -20,17 +20,17 @@
 package com.a9ski.id;
 
 /**
- * Interface for objects that have title
+ * Interface for objects that have title. Mutable version.
  *
  * @author Kiril Arabadzhiyski
  *
  */
-public interface Titled {
+public interface MutableTitled extends Titled {
 	/**
-	 * Gets the object title
+	 * Sets the object title
 	 *
-	 * @return the object title
+	 * @param title
+	 *            the object title
 	 */
-	public String getTitle();
-
+	public void setTitle(String title);
 }
