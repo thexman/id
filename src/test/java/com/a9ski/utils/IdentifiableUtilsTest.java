@@ -32,10 +32,11 @@ import java.util.Map;
 import org.junit.Test;
 
 import com.a9ski.id.Identifiable;
+import com.a9ski.id.MutableIdentifiable;
 
 public class IdentifiableUtilsTest {
 
-	private static class Entity implements Identifiable {
+	private static class Entity implements MutableIdentifiable {
 
 		/**
 		 *
