@@ -4,7 +4,7 @@
 	<groupId>com.a9ski.utils</groupId>
 	<artifactId>id</artifactId>
 	<packaging>jar</packaging>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.1</version>
 	<name>id</name>
 	<description>Base classes for database entities</description>
 	
